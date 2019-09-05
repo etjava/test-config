@@ -1,30 +1,30 @@
 spring: 
-  profiles:
-    active:
+  profiles: 
+    active: 
     - dev
 ---
-server:
+server: 
   port: 1004
   context-path: /
   
 # 数据源配置
-spring:
+spring: 
   profiles: dev
   application: 
     name: microservice-student
-  datasource:
+  datasource: 
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.1.29:3306/db_springcloud
     username: root
     password: Jiaheng@0824
-  jpa:
-    hibernate:
+  jpa: 
+    hibernate: 
       ddl-auto: update
     show-sql: true
      
-eureka:
-  instance:
+eureka: 
+  instance: 
     hostname: localhost  #eureka客户端主机实例名称
     appname: microservice-student  #客户端服务名
     instance-id: microservice-student:1004 #客户端实例名称
